@@ -224,6 +224,7 @@ func (s *Scraper) buildFreeCompanyMembersCollector(output chan *FreeCompanyMembe
 				Avatar:   membersSelectors.Entry.Avatar.ParseThroughChildren(e)[0],
 				Name:     membersSelectors.Entry.Name.ParseThroughChildren(e)[0],
 				Rank:     gcrank.Parse(membersSelectors.Entry.Rank.ParseThroughChildren(e)[0]),
+				FCRank:   membersSelectors.Entry.FCRank.ParseThroughChildren(e)[0],
 				RankIcon: membersSelectors.Entry.RankIcon.ParseThroughChildren(e)[0],
 			}
 
